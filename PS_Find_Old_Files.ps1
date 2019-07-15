@@ -8,12 +8,12 @@
 #	Use -path to designate a file directory and -fileAge to denote
 #	the age (in days) of files you want to find. For example:
 ##
-# c:\PS_Scripts\**PS_FILE_NAME**.ps1 
-# -fileAge 90
-# -Select "Downloads" in window 
+# Settings entering "90" when prompted for the "age" of the files and 
+# selecting your "Downloads" in the file browser window will find all
+# files that are older than 90 days in the Downloads folder
 ##
-#	This line will find all files in the Downloads directory that are 90 days old.
 
+######## - Functions - #########
 
 param([string]$path, [string]$filter,  [int]$fileAge)
 
@@ -56,7 +56,7 @@ function find-Space ([string]$path, [string]$filter, [string]$fileAge)
 	Out-GridView -OutputMode Multiple
 }
 
-######## - BEGIN - #########
+######## - Runtime function use - #########
 $prompt = "Y"
 
 while ($prompt -eq "Y")
